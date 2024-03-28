@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FrameWorks -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+	
+    <script type="text/javascript">
+     var doRelocation = function() {
+        var currentWidth = window.innerWidth,
+            breakpoint = 1000,
+            newLocation = 'html/phone.html';
+        if (currentWidth < breakpoint) {
+            window.location.replace(newLocation);
+        }
+     }
+     doRelocation();
+     window.addEventListener('resize', doRelocation);
+    </script>
+    
+    <title>Portfolio | Kettei</title>
+</head>
+<body>
+  <!-- <a href="./css/style.css" download="./css/style.css" >BACKDOOR</a>
+  <p>This is a backdoor. Don t click on it pls<p> -->
+  <!-- Menu -->
+  <nav name="cursor_hover">
+    <li><a id="menu" href="#">[+] Menu</a>
+      <!-- decoration for menu hover -->
+      <span id="menu_hover1">▒▒<br>▒▒▒▒</span>
+      <span id="menu_hover2">▒▒▒▒<br>▒▒</span>
+      <ul>
+        <li><a href="#info_me"> > Me</a></li>
+        <li><a href="#scroll_to_project"> > Blog</a></li>
+        <li><a href="/html/page1.html"> > CTF</a></li>
+        <li><a href="https://linkedin.com/in/raphaël-desmonts-5604252b0/" target="_blank" rel="noopener noreferrer"> > Linkedin</a></li>
+        <li><a href="https://github.com/Ket-tei/" target="_blank" rel="noopener noreferrer"> > Github</a></li>
+      </ul>
+    </li>
+  </nav>
+  <!-- Cursor -->
+  <span id="circularcursor"></span>
+  <!-- Page index -->
+  <div id="index">
+    <span id="i1"></span>
+    <span id="i2"></span>
+    <span id="i3"></span>
+  </div>
+
+  <header>
+  </header>
+
+  <!-- landing page -->
+  <section class="landing_page">
+    <div class="info">
+      <h4>Hey, i'm</h4>
+      <h1 id="title" onmouseover="changeText('Kettei', 'title')" onmouseout="changeBack('Raphaël', 'title')">Raphaël</h1>
+      <h4>Passionate of IT and student in Descartes (Rive-de-Seine) in Paris, let's dive in my world together !</h4>
+    </div>
+    <div class="button" name="cursor_hover">
+      <a href="#scroll_to_project">
+        <p>[ Let's see ! &nbsp;</p><div>&#8628;</div><p> ]</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="project">
+    <div id="scroll_to_project"></div>
+    <div class="cards">
+      <div class="card card-1">
+        <h1>C++ : Lexicon</h1>
+        <p>First project C++ of the year. We had to build the game : "Lexicon". To see more<a href="https://github.com/Ket-tei/lexicon" name="cursor_hover"> Click here :)</a></p>
+        <img src="/ressources/cppProject.png" alt="codeCPP">
+      </div>
+      <div class="card card-2">
+        <h1>React native : Phone App</h1>
+        <p>Application to organize and manage the MDL of my former high school (association: Maison des Lycéens). To see more<a href="https://github.com/Ket-tei/MDLapp" name="cursor_hover"> Click here :)</a></p>
+        <img src="/ressources/app.png" alt="temp">
+      </div>
+      <div class="card card-3">
+        <h1>Python : Bot Discord</h1>
+        <p>Discord bot which helps manage a discord server which aims to help people in difficulty in my promotion on programming languages. To see more<a href="https://github.com/Ket-tei/discord_god_bot" name="cursor_hover"> Click here :)</a></p>
+        <img src="/ressources/bot.png" alt="botDiscord">
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div id="info_me">
+      <div class="me detail1">
+        <p>I am in my first year of university to have a B.U.T in computer science at 
+        the Rive-de-Seine school in Paris (anciently Paris Descartes). I also recently graduated from high 
+        school with a distinction.</p>
+      </div>
+      <div class="me detail2">
+        <p>Like a lot of people I discovered computer and info when I was in my younger age. 
+        I was just a kid when I started to watch and observe my elder brother play video games or trying
+        to hack the neighbor wifi. And years after years I just grow up with computer and here 
+        I am now, in an I.T University to complete a new chapter of my info passion !</p>
+      </div>
+      <div class="me detail3">
+        <p>My passion... : Of course Info but to be more specific, I have an great interest in Cybersecurity
+        and app programation. I make lots of challenges on Root-me or during CTF (Capture the flags).
+        I also practice with multiple project, like making Snake in python or C or trying to give me
+        full access to other computers :).</p>
+      </div>
+    </div>
+    <img src="/ressources/portrait.png" alt="photoDeMoi">
+  </section>
+
+</body>
+<!-- Javascript Import -->
+<script src="/javascript/main.js"></script>
+</html>
