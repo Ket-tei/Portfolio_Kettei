@@ -385,3 +385,60 @@ section.project {
         height: 100%;
     }
 }
+
+/* --------------------------------------- */
+
+@media screen and (max-width: 5000px) {
+    body {
+        cursor: default;
+    }
+    #circularcursor {
+        color: transparent;
+        height: 0;
+        width: 0;
+    }
+    section.landing_page {
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary);
+        background-image: url(/ressources/noise.svg);
+    
+        .info {
+            width: 80%;
+            padding: 0.5em;
+            h1 {
+                font-size: 2em;
+                font-weight: 700;
+                color: var(--evidence);
+            }
+            h4 {
+                font-size: 1em;
+            }
+        }
+        .button {
+            a {
+                position: absolute;
+                left: 50%;
+                bottom: 10%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                text-align: center;
+                align-items: center;
+                text-decoration: none;
+                color: var(--secondary);
+                cursor: none;
+    
+                div {
+                    font-size: 1.1em;
+                    font-weight: 600;
+                }
+            }
+        }
+        .button:active {
+            a {
+                background-color: #48cf3077;
+                color: var(--white);
+            }
+        }
+    }
+}
