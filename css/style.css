@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('reset.css');
 
-/* default value of the website and reset preset */
+/* default value of the website */
 body {
     /* variable Cursor */
     --size-main-cursor: 3vh;
@@ -52,8 +52,11 @@ h1 {
     width: var(--size-main-cursor);
     border-radius: 50%;
     position: absolute;
-    z-index: 1000;
+    z-index: 99999;
     mix-blend-mode: difference;
+    pointer-events: none;
+    top: 100em;
+    left: 100px;
     transition: backdrop-filter 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out;
 }
 /* ------------------------------------------ */
@@ -210,9 +213,20 @@ section.landing_page {
         height: 25%;
         padding: 0.5em;
         h1 {
+            margin-left: -0.05em;
+            padding-left: 0;
+            width: fit-content;
             font-size: 2.5em;
             font-weight: 700;
             color: var(--evidence);
+            transition: all 200ms ease;
+        }
+        h1:hover span {
+            display: none
+        }
+          
+        h1:hover:before {
+            content: "Kettei"
         }
         h4 {
             font-size: 1.1em;
@@ -325,6 +339,7 @@ section.project {
 }
 /* ------------------------------------------ */
 
+/* Me */
 .about {
     display: flex;
     flex-flow: column;
@@ -340,6 +355,11 @@ section.project {
             position: absolute;
             padding: 1em;
             border-radius: 0.5em;
+        }
+        p {
+            text-align:justify;
+            font-size: 0.9em;
+            line-height: 1.3em;
         }
         .detail1 {
             width: 30%;
@@ -388,3 +408,4 @@ section.project {
         height: 100%;
     }
 }
+/* ------------------------------------------ */

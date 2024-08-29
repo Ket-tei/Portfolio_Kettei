@@ -1,0 +1,195 @@
+/* reset and importation preset */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('reset.css');
+
+/* default value of the website */
+body {
+    /* variable Cursor */
+    --size-main-cursor: 3vh;
+    --blur: 0%;
+    --bg-main-cursor: #fff;
+    --size-border: 0em;
+    /* -------- */
+    /* variable Color */
+    --primary: #e3d799;
+    --secondary: #1c2866;
+    --evidence: #ff6e39;
+    --evidence-bg: #ff6e3977;
+    --white: #fff;
+    --black: #000;
+    --extra: #d4ba3366;
+    /* -------- */
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary);
+    color: var(--secondary);
+    font-family: 'Lato','monospace';
+    font-size: 2.8vh;
+    cursor: none;
+}
+h1 {
+    font-family: 'Quicksand','sans-serif';
+}
+::selection {
+    background: var(extra);
+}
+
+::-moz-selection {
+    background: var(--extra);
+}
+/* ------------------------------------------ */
+
+/* Cursor */
+#circularcursor {
+    background-color: var(--bg-main-cursor);
+    backdrop-filter: blur(var(--blur));
+    border: var(--size-border) solid var(--black);    
+    height: var(--size-main-cursor);
+    width: var(--size-main-cursor);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: backdrop-filter 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out;
+}
+/* ------------------------------------------ */
+
+/* Menu */
+nav a {
+    font-family: 'Lato';
+}
+nav {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    list-style: none;
+    text-align: center;
+    z-index: 999;
+  
+    ul {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        height: 0%;
+        overflow: hidden;
+        transition: all 150ms;
+        top: 0;
+  
+        li {
+          display: block;
+          position: relative;
+          background: var(--evidence-bg);
+          width: 100%;
+          height: fit-content;
+          margin: 1.2vh 0 0 auto;
+          padding: 0 0.5em 0 0.5em;
+  
+  
+            a {
+              padding: 0;
+              font-weight: 500;
+              padding: 0.2vh 0;
+            }
+        }
+        
+        li:hover a {
+            color: var(--white);
+        }
+    }
+  
+    li {
+        background-color: transparent;
+  
+        a {
+            color: var(--secondary);
+            cursor: none;
+        }
+        #menu {
+            color: var(--secondary);
+            cursor: none;
+        }
+    }
+  
+    li:hover {
+        #menu {
+            background-color: transparent;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+    }
+  
+    li:hover ul {
+        top: -23.5vh;
+        height: 23.5vh;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 0.5vh 0.8em;
+        cursor: none;
+    }
+
+    #menu_hover1 {
+        position: fixed;
+        bottom: -15%;
+        left: -15%;
+        color: var(--secondary);
+        font-size: 4em;
+        transform: rotate(10deg);
+        text-align: left;
+        transition: all 150ms ease-out;
+    }
+    #menu_hover2 {
+        position: fixed;
+        top: -12%;
+        right: -14%;
+        color: var(--secondary);
+        font-size: 3em;
+        transform: rotate(60deg);
+        text-align: left;
+        transition: all 150ms ease-out;
+    }
+}
+nav:hover {
+    #menu_hover1 {
+        bottom: -10%;
+        left: -4%;
+    }
+    #menu_hover2 {
+        top: -6%;
+        right: -3%;
+        font-size: 4em;
+    }
+}
+/* ------------------------------------------ */
+/* Page */
+
+.ctfs {
+  height: 100vh;
+  background-color: var(--primary);
+
+  .ctf {
+    padding: 1em;
+    margin: 2em;
+    border-radius: 1em;
+    color: var(--primary);
+    background-color: var(--secondary);
+    width: 20em;
+
+    h1 {
+      color: var(--evidence);
+      font-weight: 700;
+      padding-bottom: 0.5em;
+    }
+
+    h2 {
+      padding: 0.3em 0 0.3em 0.5em;
+    }
+  }
+}

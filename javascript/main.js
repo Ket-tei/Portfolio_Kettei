@@ -186,52 +186,34 @@ timeln.to(".card-1", {
 timeln.to('.card-2', {
     xPercent: 0,
     opacity: 1,
-    zIndex: 998
+    zIndex: 996
 });
 
+timeln.addLabel('card3');
 timeln.from('.card-3', {
-    xPercent: 35,
+    xPercent: 30,
     opacity: 0
 });
-timeln.addLabel('card3');
 
 timeln.to(".card-1", {
     scale: 0.90,
     xPercent: -0.4,
     opacity: 0.4,
-    zIndex: 996
+    zIndex: 995
 }, "-=0.3");
 
 timeln.to(".card-2", {
     scale: 0.95,
     xPercent: -0.4,
-    opacity: 0.6,
-    zIndex: 997
+    opacity: 0.5,
+    zIndex: 996
 }, "-=0.3");
 
 timeln.to(".card-3", {
     xPercent: 0,
     opacity: 1,
-    zIndex: 998
+    zIndex: 997
 });
-
-timeln.to(".card-1", {
-    scale: 0.85,
-    xPercent: -0.2,
-    opacity: 0.4
-}, "-=0.3");
-
-timeln.to(".card-2", {
-    scale: 0.90,
-    xPercent: -0.2,
-    opacity: 0.5
-}, "-=0.3");
-
-timeln.to(".card-3", {
-    scale: 0.95,
-    xPercent: -0.2,
-    opacity: 1
-}, "-=0.3");
 // -------------------------
 
 
