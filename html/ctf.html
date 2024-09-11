@@ -6,6 +6,10 @@
 
   <link rel="stylesheet" href="../css/ctf.css">
   <title>Portfolio | Kettei</title>
+
+  <!-- FrameWorks -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
 <body>
     <!-- Menu -->
@@ -15,8 +19,8 @@
         <span id="menu_hover1">▒▒<br>▒▒▒▒</span>
         <span id="menu_hover2">▒▒▒▒<br>▒▒</span>
         <ul>
-          <!-- <li><a href="#scroll_to_project"> > Blog</a></li>
-          <li><a href="#info_me"> > Me</a></li> -->
+          <li><a href="../index.html#scroll_to_project"> > Blog</a></li>
+          <li><a href="../index.html#info_me"> > Me</a></li>
           <li><a href="ctf.html"> > CTF</a></li>
           <li><a href="https://linkedin.com/in/raphaël-desmonts-5604252b0/" target="_blank" rel="noopener noreferrer"> > Linkedin</a></li>
           <li><a href="https://github.com/Ket-tei/" target="_blank" rel="noopener noreferrer"> > Github</a></li>
@@ -27,28 +31,41 @@
     <span id="circularcursor"></span>
 
   <section class="ctfs">
-    <ul>
-      <h1>All my CTFs :</h1>
-       <li>
+    <section class="platform">
+      <ul>
+        <h1>Training Platforms :</h1>
+         <li>
+          <div class="ctf">
+            <h1>TryHackMe</h1>
+            <h2>Rang :</h2>
+            <h2>Challenges :</h2>
+            <h2>Levels :</h2>
+          </div>
+         </li>
+  
+         <li>
+          <div class="ctf">
+            <h1>Root-me</h1>
+            <h2>Rang :</h2>
+            <h2>Challenges :</h2>
+            <h2>Points :</h2>
+          </div>
+         </li>
+      </ul>
+    </section>
+    <section class="shot">
+      <ul>
+        <h1>CTFs :</h1>
         <div class="ctf">
-          <h1>TryHackMe</h1>
-          <h2>Rang :</h2>
-          <h2>Challenges :</h2>
-          <h2>Levels :</h2>
-        </div>
-       </li>
-
-       <li>
-        <div class="ctf">
-          <h1>Root-me</h1>
+          <h1>HeroCTF v4</h1>
           <h2>Rang :</h2>
           <h2>Challenges :</h2>
           <h2>Points :</h2>
         </div>
-       </li>
-    </ul>  
+      </ul>
+    </section> 
   </section>
 </body>
   <!-- Javascript Import -->
-  <script src="../javascript/main.js"></script>
+  <script src="../javascript/ctf.js"></script>
 </html>

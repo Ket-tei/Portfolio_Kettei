@@ -170,9 +170,20 @@ nav:hover {
 /* ------------------------------------------ */
 /* Page */
 
-.ctfs {
+section.ctfs {
   height: 100vh;
   background-color: var(--primary);
+  background-image: url(../ressources/noise.svg);
+  display: flex;
+
+  .platform {
+    width: 50vw;
+    padding: 3em 0 0 1em;
+  }
+  .shot {
+    width: 50vw;
+    padding: 3em 0 0 1em;
+  }
 
   .ctf {
     padding: 1em;
